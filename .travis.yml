@@ -20,5 +20,5 @@ after_success:
   - # Commit changes from trunk
   - cd $WP_DIR/trunk/
   - svn status |grep '\?' |awk '{print $2}'| xargs svn add
-  - svn ci -m 'Release new version' --username $WP_USERNAME --password $WP_PASSWORD
+  - svn ci -m 'Release new version' --username $WP_USERNAME --password $WP_PASSWORD --no-auth-cache
 script: php test.php
