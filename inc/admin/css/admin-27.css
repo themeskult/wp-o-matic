@@ -1,0 +1,47 @@
+#wpomain, #wpofooter {
+  height: auto !important;
+  height: 1%;
+  overflow: visible;
+  max-width: inherit;
+}
+
+#wpocontent {
+  margin-left: 0;
+}
+
+#edit_sections, #edit_tabs li, #edit_tabs li a, #edit_tabs li.current, #edit_tabs li.current a {	   
+	background: none;                 
+}
+
+#edit_buttons {
+  font-size: 9px;
+  line-height: 20px;
+}
+
+#edit_tabs { 
+  height: 20px;
+}
+
+#edit_tabs li {
+  text-align: left;
+  padding-left: 0;
+}
+
+#edit_tabs li a {
+  min-width: inherit;
+  padding-right: 30px;
+}
+
+#edit_buttons .help_link {
+  line-height: 20px;
+}
+
+#edit_sections {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-right: 0;
+}
+
+#wpofooter {
+  margin-top: 20px;
+}

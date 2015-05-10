@@ -1,0 +1,76 @@
+.wpom-tabs {
+  margin: 0;
+  border-bottom: 1px solid #288ad0;
+}
+.wpom-tabs li {
+  display: inline-block;
+  margin: 0;
+}
+.wpom-tabs li a {
+  padding: 0 20px;
+  display: inline-block;
+  line-height: 34px;
+  text-decoration: none;
+  color: #666;
+}
+.wpom-tabs li a:hover {
+  color: #288ad0;
+}
+.wpom-tabs li.current a {
+  color: #fff;
+  background: #288ad0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.wpom-edit-section {
+  margin-bottom: 30px;
+}
+.wpom-edit-section .wpom-edit-feed {
+  margin: 20px 0;
+}
+.wpom-edit-section #section_tools ul {
+  margin: 0;
+}
+.wpom-edit-section #section_tools ul label {
+  margin-right: 10px;
+}
+.wpom-box {
+  float: left;
+  width: 46%;
+  min-height: 200px;
+  margin-top: 30px;
+}
+.wpom-box ol,
+.wpom-box li {
+  margin: 0;
+}
+.wpom-box ol {
+  list-style-position: inside;
+}
+.wpom-box li {
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+  margin: 0;
+}
+.wpom-box h3 {
+  background: #eee;
+  padding: 20px;
+  margin: 0;
+}
+.wpom-box.wpom-box-left {
+  margin-right: 4%;
+}
+.clearfix {
+  overflow: hidden;
+}
+hr {
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  border: 0;
+}
+#wpofooter {
+  margin: 100px 0 40px 0;
+  color: #333;
+  text-align: center;
+}

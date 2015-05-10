@@ -1,0 +1,454 @@
+#wpomain #options,
+#wpomain #edit_tabs,
+#wpomain #edit_buttons,
+#wpomain ul.import_links,
+#wpomain div#setup_buttons {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: auto !important;
+  height: 1%;
+}
+#wpomain #categories,
+#wpomain #edit_words {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+#wpomain #add_word {
+  clear: both;
+}
+#wpomain .wpom-sidebar h3 {
+  margin-top: 10px;
+  color: #333;
+}
+#wpomain #wpomenu {
+  background: url("../images/bg_menu.gif");
+  padding: 0;
+  border: 0;
+  padding-left: 10px;
+}
+#wpomain #wpomenu ul {
+  margin: 0;
+  padding: 0;
+  background: url("../images/bg_menu.gif") right;
+  height: 36px;
+}
+#wpomain #wpomenu ul li {
+  float: left;
+  list-style-type: none;
+  margin: 6px 10px 0 0;
+  padding-left: 7px;
+}
+#wpomain #wpomenu ul li a {
+  display: block;
+  float: left;
+  border-bottom: none;
+  font-size: 85%;
+  font-family: "Lucida Grande", "Verdana";
+  font-weight: bold;
+  color: #6c95b4;
+  height: 21px;
+  padding: 2px 7px 0 0;
+}
+#wpomain #wpomenu ul li.current {
+  background: url("../images/bg_menu_current.gif") left;
+  border: none;
+}
+#wpomain #wpomenu ul li.current a {
+  color: #fff;
+  background: url("../images/bg_menu_current.gif") right;
+}
+#wpomain .wpom-sidebar .help_link {
+  float: right;
+}
+#wpomain .wpom-sidebar h3 {
+  margin-bottom: 0;
+}
+#wpomain .wpom-sidebar_cron,
+#wpomain .wpom-sidebar p {
+  margin-top: 10px;
+}
+#wpomain p.none {
+  color: #666;
+}
+#wpomain p#log_status {
+  margin-top: 10px;
+}
+#wpomain .import_submit {
+  border-top: 1px dotted #ccc;
+  padding-top: 10px;
+  margin-top: 10px;
+  position: relative;
+  width: 400px;
+}
+#wpomain .import_submit .submit {
+  position: absolute;
+  right: 0;
+}
+#wpomain #importurl {
+  width: 290px;
+}
+#wpomain #searchform {
+  padding-bottom: 10px;
+}
+#wpomain p.errors {
+  color: #f00;
+}
+#wpomain #edit_buttons {
+  float: right;
+}
+#wpomain #edit_buttons li {
+  float: left;
+  margin-left: 10px;
+  list-style-type: none;
+}
+#wpomain #edit_sections .section {
+  padding-top: 15px;
+  display: none;
+}
+#wpomain #edit_sections .section .buttons ul li {
+  list-style-type: none;
+}
+#wpomain #edit_sections .section .buttons ul li div,
+#wpomain #edit_sections .section .buttons ul li label {
+  color: #333;
+}
+#wpomain #edit_sections .section h3 {
+  margin: 0;
+}
+#wpomain #edit_sections .current {
+  display: block;
+  border: none;
+}
+#wpomain #edit_sections .section .text,
+#wpomain #edit_sections .section .longtext,
+#wpomain #edit_sections .section .checkbox,
+#wpomain #edit_sections .section .btn,
+#wpomain #edit_sections .section .multipletext,
+#wpomain #edit_sections .section .radio,
+#wpomain #edit_sections .section .textarea,
+#wpomain #edit_sections .section .inlinetext {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+#wpomain #edit_sections .section .longtext label,
+#wpomain #edit_sections .section .btn label,
+#wpomain #edit_sections .section .select label,
+#wpomain #edit_sections .section .multipletext label,
+#wpomain #edit_sections .section .radio label.main,
+#wpomain #edit_sections .section .textarea label,
+#wpomain #edit_sections .section .text label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold !important;
+}
+#wpomain #edit_sections .section .radio label.main {
+  margin-bottom: 8px;
+  cursor: default;
+  font-size: 100%;
+}
+#wpomain #edit_sections .section .radio label {
+  margin-right: 10px;
+  font-size: 85%;
+}
+#wpomain #edit_sections .section .longtext input {
+  width: 300px;
+}
+#wpomain #edit_sections .section .textarea textarea {
+  width: 300px;
+  height: 80px;
+}
+#wpomain #edit_sections .section #post_template {
+  margin-top: 5px;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: none;
+}
+#wpomain #edit_sections .section #post_template textarea.large {
+  width: 500px;
+  height: 400px;
+}
+#wpomain #edit_sections .section #post_template.current {
+  display: block;
+}
+#wpomain #edit_sections .section #post_template textarea {
+  width: 400px;
+  height: 150px;
+}
+#wpomain #edit_sections .section p {
+  margin: 0 0 0.7em 0;
+}
+#wpomain #edit_sections .section p.note,
+#wpomain p.note {
+  margin: 3px 0 0 0;
+  color: #666;
+  font-size: 11px;
+  font-weight: normal !important;
+}
+#wpomain #edit_sections .section .section_warn {
+  background: #ffffe0;
+  border: 1px solid #ebeba9;
+  padding: 8px;
+  font-size: 11px;
+}
+#wpomain #edit_sections .section .section_warn .icon {
+  float: left;
+  margin-right: 10px;
+}
+#wpomain #edit_sections .section .section_warn h3 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+#wpomain #edit_feed div.inlinetext input.input_text {
+  width: 480px;
+  padding-right: 25px;
+}
+#wpomain #edit_feed div.inlinetext input.ok,
+#wpomain #edit_feed div input.err,
+#wpomain #edit_feed div input.load {
+  background-position: 490px 3px;
+  background-repeat: no-repeat;
+}
+#wpomain #edit_feed div.inlinetext .delete_label {
+  font-weight: normal;
+}
+#wpomain #edit_feed div input.ok {
+  background-image: url("../images/icon_ok.gif");
+}
+#wpomain #edit_feed div input.load {
+  background-image: url("../images/icon_spinner.gif");
+}
+#wpomain #edit_feed div input.err {
+  background-image: url("../images/icon_stop.gif");
+}
+#wpomain #edit_submit {
+  font-size: 11px;
+  padding: 2px 3px;
+  margin-bottom: 5px;
+}
+#wpomain .word {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#wpomain .word .relink,
+#wpomain .word .rewrite {
+  margin-left: 10px;
+}
+#wpomain #edit_words li {
+  list-style-type: none;
+  float: left;
+  width: 400px;
+  margin: 10px;
+}
+#wpomain #edit_words .word .textarea textarea {
+  height: 50px;
+}
+#wpomain #edit_words .word .textarea .regex {
+  display: block;
+  margin-top: 5px;
+}
+#wpomain #categories {
+  width: 600px;
+  list-style-type: none;
+  margin: 10px 0 10px 10px;
+  padding: 0;
+}
+#wpomain #categories li {
+  width: 200px;
+}
+#wpomain #categories li label,
+#wpomain #categories li.pad1 {
+  margin-left: 10px;
+}
+#wpomain #categories li.pad2 {
+  margin-left: 20px;
+}
+#wpomain #categories li.pad3 {
+  margin-left: 30px;
+}
+#wpomain #categories li.pad4 {
+  margin-left: 40px;
+}
+#wpomain #categories li.pad5 {
+  margin-left: 50px;
+}
+#wpomain #categories li.pad6 {
+  margin-left: 60px;
+}
+#wpomain .test_link {
+  font-size: 10px;
+  position: relative;
+  bottom: 3px;
+  border-bottom: none;
+  text-indent: -500em;
+  width: 16px;
+  height: 16px;
+}
+#wpomain .test_ok {
+  background: url("../images/icon_ok.gif");
+}
+#wpomain #importtree li ul li {
+  margin-left: 20px;
+  color: #f00 !important;
+}
+#wpomain #options,
+#wpomain #options li {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 10px;
+}
+#wpomain #options li label {
+  font-weight: bold;
+}
+#wpomain #wpofooter p {
+  width: 300px;
+  margin: auto;
+  padding-top: 30px;
+  text-align: center;
+}
+#wpomain #importtree {
+  width: 400px;
+}
+#wpomain #importtree ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+#wpomain #importtree h4 {
+  font-size: 13px;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+#wpomain #importtree li li h4 {
+  color: #666;
+}
+#wpomain #importtree li li li h4 {
+  color: #999;
+}
+#wpomain #importtree li li.odd {
+  background: #f1f5fa;
+}
+#wpomain #importtree li li h4 label {
+  padding: 3px;
+}
+#wpomain #importtree h4 label {
+  display: block;
+}
+#wpomain #importtree .import_links {
+  float: right;
+  margin: 3px 3px 0 0;
+}
+#wpomain #importtree .import_links li {
+  list-style-type: none;
+  float: left;
+  margin-left: 5px;
+}
+#wpomain #importtree .import_links li a {
+  display: block;
+  float: left;
+  text-indent: -500em;
+  width: 16px;
+  height: 16px;
+  border-bottom-width: 0;
+}
+#wpomain #importtree .import_links li a.feed_rss {
+  background: url("../images/icon_rss.png");
+}
+#wpomain #importtree .import_links li a.feed_link {
+  background: url("../images/icon_link.png");
+}
+#wpomain #importtree .check {
+  float: right;
+  font-size: 11px;
+  margin-right: 3px;
+}
+#wpomain ol.campaignlist li span.details {
+  float: right;
+  font-weight: bold;
+}
+#wpomain div.error ul {
+  margin: 0 0 20px 20px;
+  padding: 0;
+}
+#wpomain div.error ul li {
+  list-style-type: square;
+}
+#wpomain #command_input {
+  width: 600px;
+  margin-right: 8px;
+}
+#wpomain #tags_list {
+  font-size: 11px;
+  color: #999;
+  padding-left: 6px;
+  border-left: 3px solid #eee;
+}
+#wpomain #cachepath {
+  color: #333;
+}
+#wpomain #importoptions {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 1px dotted #999;
+  border-bottom: 1px dotted #999;
+}
+#wpomain #importoptions h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#wpomain #importoptions ul,
+#wpomain #export_campaigns {
+  list-style: none;
+  padding-left: 15px;
+}
+#wpomain #clean_logs {
+  float: right;
+}
+#wpomain .logs_bar {
+  border-bottom: 1px dotted #999;
+  height: 35px;
+}
+#wpomain #export_campaigns {
+  border-top: 1px dotted #999;
+  border-bottom: 1px dotted #999;
+  padding: 10px 0 8px;
+}
+#wpomain #setup_steps {
+  padding-top: 10px;
+  padding-left: 0;
+  margin-left: 0;
+  border: 1px dotted #999;
+  border-width: 1px 0;
+}
+#wpomain #setup_steps li {
+  margin-bottom: 30px;
+  list-style-type: none;
+  display: none;
+}
+#wpomain #setup_steps li.current {
+  display: list-item !important;
+  display: block;
+}
+#wpomain #setup_button_submit {
+  float: right;
+}
+#wpomain #setup_buttons input.disabled {
+  background: #eee;
+  color: #999;
+}
+#wpomain .command {
+  border: 1px solid #ccc;
+  background: 1px solid #fafafa;
+  padding: 10px;
+  color: #666;
+}
+#wpomain #options_cron .command {
+  margin: 10px 0;
+}
+#wpomain #options_cron h3 {
+  font-size: 11px;
+  color: #333;
+  margin: 10px 0;
+}
