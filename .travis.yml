@@ -1,28 +1,22 @@
 language: php
-
+php:
+  - 5.4
 after_success:
   - # Working directories
   - GH_DIR=wp-o-matic-github
   - WP_DIR=wp-o-matic-wordpress
-
   - # Wordpress SVN url
   - SVN_URL=http://plugins.svn.wordpress.org/wp-o-matic/
-
   - # Save reference for all repo files
   - GH_FILES=$(ls)
-
   - # Create folder to hold this repo files
   - mkdir $GH_DIR
-
   - # Move all files there to keep them safe
   - mv $GH_FILES $GH_DIR
-
   - # Checkout wordpress svn repository
   - svn co $SVN_URL $WP_DIR
-
   - # Override wordpress repo files with Github's
   - cp -r $GH_DIR/* $WP_DIR/trunk
-
   - # Commit changes from trunk
   - cd $WP_DIR/trunk/
   - svn status |grep '\?' |awk '{print $2}'| xargs svn add
