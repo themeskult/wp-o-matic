@@ -1,3 +1,6 @@
+language: php
+php:
+  - 5.4
 after_success:
   - # Working directories
   - GH_DIR=wp-o-matic-github
@@ -18,3 +21,4 @@ after_success:
   - cd $WP_DIR/trunk/
   - svn status |grep '\?' |awk '{print $2}'| xargs svn add
   - svn ci -m 'Release new version' --username $WP_USERNAME --password $WP_PASSWORD --no-auth-cache
+script: echo "OK"
