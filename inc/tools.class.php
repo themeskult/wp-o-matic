@@ -1,8 +1,8 @@
 <?php
 
-class WPOTools {   
+class WPOTools {
 
-  function pick()
+  static function pick()
   {
     $argc = func_num_args();
     for ($i = 0; $i < $argc; $i++) {
@@ -12,35 +12,35 @@ class WPOTools {
         }
     }
 
-    return null;    
+    return null;
   }
-  
-  function getOptions($args)
+
+  static function getOptions($args)
   {
     if (is_array($args))
   	  $r = &$args;
   	else
   		parse_str($args, $r);
-  		
+
   	return $r;
   }
-  
-  function isAjax() { 
-    return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH']  == 'XMLHttpRequest'); 
+
+  static function isAjax() {
+    return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH']  == 'XMLHttpRequest');
   }
-    
-  function isUnix()
+
+  static function isUnix()
   {
 		return in_array(php_uname('s'), array('Linux', 'FreeBSD', 'OpenBSD', 'Darwin', 'SunOS', 'AIX'));
-  }        
-  
+  }
+
   // from Pear System::which, released under the PHP License
   // http://www.php.net/license/3_0.txt
   // slightly modified
-  function getBinaryPath($program, $append = '', $fallback = null)
-  { 
+  static function getBinaryPath($program, $append = '', $fallback = null)
+  {
     $win = substr(PHP_OS, 0, 3) == 'WIN';
-    
+
     // enforce API
     if (!is_string($program) || '' == $program) {
         return $fallback;
@@ -92,12 +92,12 @@ class WPOTools {
     }
     return $fallback;
   }
-  
-  function getQueryArgs($args, $defaults = array())
-  {                                   
-    $r = WPOTools::getOptions($args);  		
+
+  static function getQueryArgs($args, $defaults = array())
+  {
+    $r = WPOTools::getOptions($args);
     $ret = array_merge($defaults, $r);
-       
+
     if(isset($ret['page']) && $ret['page'] && isset($ret['perpage']) && $ret['perpage'])
     {
       $perpage = $ret['perpage'];
@@ -108,78 +108,78 @@ class WPOTools {
       $end = $start + $perpage;
       $ret['limit'] = "{$start}, {$end}";
     }
-   
+
     if(isset($ret['where']) && $ret['where'])
       $ret['where'] = ' AND ' . $ret['where'];
-   
+
     if(isset($ret['limit']) && $ret['limit'])
-      $ret['limit'] = 'LIMIT ' . $ret['limit'];                               
-      
+      $ret['limit'] = 'LIMIT ' . $ret['limit'];
+
     return $ret;
   }
-  
-  function insertQuery($table, $params)
+
+  static function insertQuery($table, $params)
   {
     $fields = array_keys($params);
     return "INSERT INTO $table (".implode(', ',$fields).") VALUES ('".implode("','",$params)."')"  ;
   }
-  
-  function updateQuery($table, $params, $where) 
+
+  static function updateQuery($table, $params, $where)
   {
     $bits = array();
     foreach(array_keys($params) as $k )
       $bits[] = "{$table}.{$k}='$params[$k]'";
     return "UPDATE $table SET ".implode(', ',$bits)." WHERE $where";
   }
-           
-  function addOptions($options)
+
+  static function addOptions($options)
   {
     foreach($options as $option => $vars)
-      add_option($option, $vars[0], $vars[1], (isset($vars[2])) ? $vars[2] : null); 
-  } 
-  
-  function addMissingOptions($options)
+      add_option($option, $vars[0], $vars[1], (isset($vars[2])) ? $vars[2] : null);
+  }
+
+  static function addMissingOptions($options)
   {
     $opt = array();
-    
+
     foreach($options as $option => $vars)
       if(! get_option($option)) $opt[$option] = $vars;
-      
+
     return count($opt) ? WPOTools::addOptions($opt) : true;
   }
-  
-  function deleteOptions($options)
+
+  static function deleteOptions($options)
   {
     foreach($options as $option)
       delete_option($option);
   }
-  
-  function parseImages($text)
-  {    
+
+  static function parseImages($text)
+  {
     preg_match_all('/<img(.+?)src=\"(.+?)\"(.*?)>/', $text, $out);
     return $out;
   }
-  
-  function stripText($text)
+
+  static function stripText($text)
   {
     $text = strtolower($text);
- 
+
     // strip all non word chars
     $text = preg_replace('/\W/', ' ', $text);
- 
+
     // replace all white space sections with a dash
     $text = preg_replace('/\ +/', '-', $text);
- 
+
     // trim dashes
     $text = preg_replace('/\-$/', '', $text);
     $text = preg_replace('/^\-/', '', $text);
- 
+
     return $text;
   }
-  
+
   // from somewhere in the internet.. too lazy to do it myself
   // @todo add right copyright
-  function calcTime($t, $sT = 0, $sel = 'Y', $includenull = true) {
+  static function calcTime($t, $sT = 0, $sel = 'Y', $includenull = true) {
 
       $sY = 31536000;
       $sW = 604800;
@@ -241,8 +241,8 @@ class WPOTools {
 
       return $r;
   }
-  
-  function stringToArray($string)
+
+  static function stringToArray($string)
   {
     preg_match_all('/
       \s*(\w+)              # key                               \\1
@@ -263,14 +263,14 @@ class WPOTools {
 
     return $attributes;
   }
-  
+
   /**
    * Finds the type of the passed value, returns the value as the new type.
    *
    * @param  string
    * @return mixed
    */
-  function literalize($value, $quoted = false)
+  static function literalize($value, $quoted = false)
   {
     // lowercase our value for comparison
     $value  = trim($value);
@@ -306,8 +306,8 @@ class WPOTools {
 
     return $value;
   }
-  
-  function tryThese()
+
+  static function tryThese()
   {
     $num = func_num_args();
     for($i = 0; $i < $num; $i++)
@@ -316,8 +316,8 @@ class WPOTools {
         return func_get_arg($i);
     }
   }
-  
-  function every()
+
+  static function every()
   {
     $num = func_num_args();
     for($i = 0; $i < $num; $i++)
@@ -327,19 +327,19 @@ class WPOTools {
     }
     return true;
   }
-  
-  function timezoneMysql($format, $time)
+
+  static function timezoneMysql($format, $time)
   {
-    return mysql2date($format, get_date_from_gmt($time));    
+    return mysql2date($format, get_date_from_gmt($time));
   }
-  
+
 }
 
 // thanks php.net
-if ( !function_exists('file_put_contents') && !defined('FILE_APPEND') ) 
+if ( !function_exists('file_put_contents') && !defined('FILE_APPEND') )
 {
   define('FILE_APPEND', 1);
-  function file_put_contents($n, $d, $flag = false) 
+  function file_put_contents($n, $d, $flag = false)
   {
     $mode = ($flag == FILE_APPEND || strtoupper($flag) == 'FILE_APPEND') ? 'a' : 'w';
     $f = @fopen($n, $mode);
@@ -356,7 +356,7 @@ if ( !function_exists('file_put_contents') && !defined('FILE_APPEND') )
 
 if(!function_exists('str_ireplace'))
 {
-  function str_Ireplace($search, $replace, $subject) 
+  function str_Ireplace($search, $replace, $subject)
   {
     if (is_array($search))
       foreach ($search as $word) $words[] = "/".$word."/i";
